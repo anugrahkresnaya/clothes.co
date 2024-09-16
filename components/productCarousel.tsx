@@ -42,7 +42,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({
                 width={295}
                 height={298}
               />
-              <p className='satoshi-bold text-xl'>{product.name}</p>
+              <p className='satoshi-bold text-xl mt-4'>{product.name}</p>
               <div className='flex'>
                 <Rating
                   readOnly
