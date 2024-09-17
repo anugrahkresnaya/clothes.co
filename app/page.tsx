@@ -5,6 +5,72 @@ import gucci from "@/public/gucci-logo.svg"
 import zara from "@/public/zara-logo.svg"
 import ck from "@/public/ck-logo.svg"
 import prada from "@/public/prada-logo.svg"
+import ProductCarousel from "@/components/productCarousel"
+
+const newArrivals = [
+  {
+    id: 1,
+    name: "T-shirt with Tape Details",
+    image: "/product-1.svg",
+    price: 120,
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    name: "Skinny Fit Jeans",
+    image: "/product-2.svg",
+    price: 240,
+    discountPrice: 200,
+    rating: 4.6,
+  },
+  {
+    id: 3,
+    name: "Checkered Shirt",
+    image: "/product-3.svg",
+    price: 180,
+    rating: 4.4,
+  },
+  {
+    id: 4,
+    name: "Sleeve Striped T-shirt",
+    image: "/product-4.svg",
+    price: 160,
+    discountPrice: 130,
+    rating: 4.7,
+  },
+]
+
+const topSelling = [
+  {
+    id: 5,
+    name: "Vertical Striped Shirt",
+    image: "/product-5.svg",
+    price: 232,
+    discountPrice: 212,
+    rating: 4.5,
+  },
+  {
+    id: 6,
+    name: "Courage Graphic T-shirt",
+    image: "/product-6.svg",
+    price: 145,
+    rating: 4.6,
+  },
+  {
+    id: 7,
+    name: "Loose Fit Bermuda Shorts",
+    image: "/product-7.svg",
+    price: 80,
+    rating: 4.3,
+  },
+  {
+    id: 8,
+    name: "Faded Skinny Jeans",
+    image: "/product-8.svg",
+    price: 210,
+    rating: 4.5,
+  },
+]
 
 export default function Home() {
   return (
@@ -50,14 +116,9 @@ export default function Home() {
         <Image src={prada} alt='prada' />
         <Image src={ck} alt='calvin klein' />
       </section>
-      <section className=''>
-        <h1 className='text-center integralCF text-5xl mt-[72px] mb-[55px]'>
-          NEW ARRIVALS
-        </h1>
-        <div>
-          <div></div>
-        </div>
-      </section>
+      <ProductCarousel title='NEW ARRIVALS' products={newArrivals} />
+      <div className='border mt-16'></div>
+      <ProductCarousel title='TOP SELLING' products={topSelling} />
     </div>
   )
 }
