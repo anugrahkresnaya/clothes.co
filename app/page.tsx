@@ -1,101 +1,124 @@
-import Image from "next/image";
+import Image from "next/image"
+import heroDesktop from "@/public/hero-desktop.svg"
+import versace from "@/public/versace-logo.svg"
+import gucci from "@/public/gucci-logo.svg"
+import zara from "@/public/zara-logo.svg"
+import ck from "@/public/ck-logo.svg"
+import prada from "@/public/prada-logo.svg"
+import ProductCarousel from "@/components/productCarousel"
+
+const newArrivals = [
+  {
+    id: 1,
+    name: "T-shirt with Tape Details",
+    image: "/product-1.svg",
+    price: 120,
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    name: "Skinny Fit Jeans",
+    image: "/product-2.svg",
+    price: 240,
+    discountPrice: 200,
+    rating: 4.6,
+  },
+  {
+    id: 3,
+    name: "Checkered Shirt",
+    image: "/product-3.svg",
+    price: 180,
+    rating: 4.4,
+  },
+  {
+    id: 4,
+    name: "Sleeve Striped T-shirt",
+    image: "/product-4.svg",
+    price: 160,
+    discountPrice: 130,
+    rating: 4.7,
+  },
+]
+
+const topSelling = [
+  {
+    id: 5,
+    name: "Vertical Striped Shirt",
+    image: "/product-5.svg",
+    price: 232,
+    discountPrice: 212,
+    rating: 4.5,
+  },
+  {
+    id: 6,
+    name: "Courage Graphic T-shirt",
+    image: "/product-6.svg",
+    price: 145,
+    rating: 4.6,
+  },
+  {
+    id: 7,
+    name: "Loose Fit Bermuda Shorts",
+    image: "/product-7.svg",
+    price: 80,
+    rating: 4.3,
+  },
+  {
+    id: 8,
+    name: "Faded Skinny Jeans",
+    image: "/product-8.svg",
+    price: 210,
+    rating: 4.5,
+  },
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <section className='flex flex-row bg-[#F2F0F1] justify-between -mx-[100px] px-[100px]'>
+        <div className='flex flex-col justify-center'>
+          <h1 className='integralCF text-[64px] leading-[64px] mb-8'>
+            FIND CLOTHES <br />
+            THAT MATCHES <br />
+            YOUR STYLES
+          </h1>
+          <p className='text-base max-w-[545px] leading-[22px] mb-8'>
+            Browse through our diverse range of meticulously crafted garments,
+            designed to bring out your individuality and cater your sense of
+            style.
+          </p>
+          <button className='py-[15px] px-[67px] bg-[#000000] text-white rounded-[62px] w-fit mb-12'>
+            Shop Now
+          </button>
+          <div className='grid grid-cols-3 divide-x divide-black/60'>
+            <div className='flex flex-col items-center'>
+              <p className='text-[40px] satoshi-bold'>200+</p>
+              <p className='text-base satoshi-regular'>International Brands</p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <p className='text-[40px] satoshi-bold'>2,000+</p>
+              <p className='text-base satoshi-regular'>High-Quality Products</p>
+            </div>
+            <div className='flex flex-col items-center'>
+              <p className='text-[40px] satoshi-bold'>30,000+</p>
+              <p className='text-base satoshi-regular'>Happy Customers</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className='h-full'>
+          <Image src={heroDesktop} alt='hero' />
+        </div>
+      </section>
+      <section className='bg-black flex justify-between -mx-[100px] px-[100px] py-[42px]'>
+        <Image src={versace} alt='versace' />
+        <Image src={zara} alt='zara' />
+        <Image src={gucci} alt='gucci' />
+        <Image src={prada} alt='prada' />
+        <Image src={ck} alt='calvin klein' />
+      </section>
+      <ProductCarousel title='NEW ARRIVALS' products={newArrivals} />
+      <div className='border mt-16'></div>
+      <ProductCarousel title='TOP SELLING' products={topSelling} />
     </div>
-  );
+  )
 }

@@ -2,7 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@font-face {
+  font-family: "IntegralCF";
+  src: url("/fonts/integralcf-bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("/fonts/Satoshi-Bold.otf") format("opentype");
+}
+
+.integralCF {
+  font-family: "IntegralCF", sans-serif;
+}
+
+.satoshi-regular {
+  font-family: "Satoshi-Regular", sans-serif;
+}
+
+.satoshi-bold {
+  font-family: "Satoshi-Bold", sans-serif;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +51,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
